@@ -10,7 +10,7 @@ resource "aws_sns_topic_subscription" "email-target" {
 }
 
 resource "aws_codepipeline" "pipeline" {
-  name     = "static-web-pipeline"
+  name     = "web-pipeline"
   role_arn = aws_iam_role.pipeline_role.arn
   tags = {
     Environment = var.env
